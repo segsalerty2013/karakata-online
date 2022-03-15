@@ -15,6 +15,11 @@ const commonRoutes = [
     path: '/about',
     name: 'About',
     component: () => import('@/views/Home.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/auth/Register.vue')
   }
 ]
 
@@ -25,7 +30,9 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history',
+  linkExactActiveClass: 'active'
 })
 
 export default router
